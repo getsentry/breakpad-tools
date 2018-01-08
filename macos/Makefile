@@ -157,6 +157,7 @@ $(BINARIES): %: $(OUT_DIR)/%
 $(LIBRARIES): %: $(OUT_DIR)/lib%.a
 
 $(OUT_DIR)/mini.dmp: $(OUT_DIR)/crash
+	$(RM) $(OUT_DIR)/mini.dmp
 	-$(shell cd $(OUT_DIR) && ./crash)
 	mv $(wildcard $(OUT_DIR)/*.dmp) $(OUT_DIR)/mini.dmp
 
@@ -190,6 +191,7 @@ $(OUT_DIR)/%.o: $(TOP_DIR)/%.mm
 
 dist: all
 	$(RM) -r $(OUT_DIR)/deps $(OUT_DIR)/macos
+	../scripts/cp-symbols.sh $(OUT_DIR)/symbols $(OUT_DIR)/crash.sym
 
 clean:
 	$(RM) -r $(OUT_DIR)

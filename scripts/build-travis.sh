@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 # Run the dist build
 cd $PLATFORM
 make -j4 dist
