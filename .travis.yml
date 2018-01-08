@@ -1,0 +1,23 @@
+language: cpp
+install: make
+compiler: clang
+
+script: scripts/build-travis.sh
+
+matrix:
+  include:
+    - os: linux
+      env: PLATFORM=linux
+    - os: osx
+      env: PLATFORM=macos
+
+deploy:
+  provider: s3
+  access_key_id: AKIAJKYWAF3QS7SFL75Q
+  secret_access_key:
+    secure: wOcJ+hbnVHKWHx2yctMp5QIZA1+vxeorrldUPtnJGCLOiDsYLABeR1E2cvM04hoSvMJjR5XFhu6PZMTLTTs+15HZmA+NkSB5IIVLy1CU8D7R03xNdQquGtVj02rfCaSXbyTTPTlVL8AKHDSPdsQu8AfHpDL9Yv8y/QGrdI1aawwHsA56sQuMlKqfDlKO88hTmSxLKEqVS5LpnrJSqngTtEm193dsXjFznNtWUH6xq2jo8Aw4MGbHx9f+VbakBiWJz+gn1VHTDQnMiIHFkL73Eag42T5KOel6wEbVqtaUgBkCWOxCVGX2ov4wZZGEXe/IVVUdBXOtvHUtHgdsCvkbMpM02sNiS2Wvrj4YYMJQfflQspZUtMDIq3MGMxTQWz/NSbwu69C26RCei2/28anSiE6Smow6ESX5zLFU16r05gCG8AZrQ7LjJYwO8Sit3aC/FDrDnegelUvTim84V9bLLPKARdsIT6DqEZFmoYrNDx3MJ9YlOaylcDG9iXmapUfRNOdjom4ZC9MTof9sAkTVJBGkraVaqjLbC/6zUtO6VjeDujDFd3DzUKXc/nMx6BnYcNUarr0/Q29sil48lUWk4FbRX+6Yw8haECp4qXBMNUEgjLGbEdkkugrSu5XYcZJVRl+P5WYzEj6CCYWB74DtbnW4p7gPkJa9B/SAQbXFupw=
+  skip_cleanup: true
+  acl: public_read
+  bucket: getsentry-builds
+  upload-dir: $TRAVIS_REPO_SLUG
+  local_dir: dist
