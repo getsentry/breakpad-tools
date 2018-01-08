@@ -2,12 +2,23 @@
 
 Builds Breakpad and creates artifacts on different operating systems. To use it,
 clone on a compatible system, go to the folder of the respective operating
-system, and run `make all` or run one of the targets below:
+system, and run `make all` or run one of the targets below.
 
 ```sh
 git clone --recursive https://github.com/getsentry/breakpad-tools
 cd breakpad-tools/linux && make all
 ```
+
+## Download
+
+The latest builds can always be downloaded here:
+
+* [Download linux archive](https://s3.amazonaws.com/getsentry-builds/getsentry/breakpad-tools/breakpad-tools-linux.zip)
+* [Download macOS archive](https://s3.amazonaws.com/getsentry-builds/getsentry/breakpad-tools/breakpad-tools-macos.zip)
+
+## Contents
+
+Each platform build folder contains the following artifacts:
 
 **Libraries**
 
@@ -29,13 +40,6 @@ cd breakpad-tools/linux && make all
   _target: `make symbols`_
 * `mini.dmp`: A crash dump of the `crash` executable<br>
   _target: `make minidump`_
-
-## Download
-
-The latest builds can always be downloaded here:
-
-* [Download linux archive](https://s3.amazonaws.com/getsentry-builds/getsentry/breakpad-tools/breakpad-tools-linux.zip)
-* [Download macOS archive](https://s3.amazonaws.com/getsentry-builds/getsentry/breakpad-tools/breakpad-tools-macos.zip)
 
 _**Please note** that the examples are always built from scratch, so UUIDs will
 change!_
