@@ -2,6 +2,7 @@ language: cpp
 install: make
 compiler: clang
 
+install: skip
 script: scripts/build-travis.sh
 
 matrix:
