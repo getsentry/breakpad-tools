@@ -40,7 +40,7 @@ Each platform build folder contains the following artifacts:
   _target: `make symbols`_
 * `mini.dmp`: A crash dump of the `crash` executable<br>
   _target: `make minidump`_
-* `symbols`: Folder containing breakpad symbols in special locations<br>
+* `symbols/`: Symbol folder structure required by the processor<br>
   _target: `make dist` (requires all other targets)_
 
 _**Please note** that the examples are always built from scratch, so UUIDs will
