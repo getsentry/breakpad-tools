@@ -1,6 +1,7 @@
 language: cpp
 install: make
 compiler: clang
+sudo: required
 
 install: skip
 script: scripts/build-travis.sh
