@@ -53,5 +53,5 @@ contains a slightly different version customized to the platform. Breakpad has
 broken their own build files (especially on macOS) quite frequently, so this is
 the most stable approach.
 
-The breakpad submodule has been updated last on `2017-12-22`. Future updates
+The breakpad submodule has been updated last on `2018-01-09`. Future updates
 might require changes to the makefiles.
