@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27309.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dump_syms", "dump_syms.vcxproj", "{D743E80E-5552-481B-83AC-BDEC25A54A23}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dump_syms", "dump_syms\dump_syms.vcxproj", "{D743E80E-5552-481B-83AC-BDEC25A54A23}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crash", "crash.vcxproj", "{3CB46ECF-54D2-4F1E-903F-BC6C30713A48}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crash", "crash\crash.vcxproj", "{3CB46ECF-54D2-4F1E-903F-BC6C30713A48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

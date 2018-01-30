@@ -70,10 +70,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\deps\breakpad\src;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\deps\breakpad\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>..\deps\breakpad\src;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\deps\breakpad\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -99,6 +99,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -120,24 +121,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\deps\breakpad\src\client\windows\crash_generation\client_info.cc" />
-    <ClCompile Include="..\deps\breakpad\src\client\windows\crash_generation\crash_generation_client.cc" />
-    <ClCompile Include="..\deps\breakpad\src\client\windows\crash_generation\crash_generation_server.cc" />
-    <ClCompile Include="..\deps\breakpad\src\client\windows\crash_generation\minidump_generator.cc" />
-    <ClCompile Include="..\deps\breakpad\src\client\windows\handler\exception_handler.cc" />
-    <ClCompile Include="..\deps\breakpad\src\common\windows\guid_string.cc" />
-    <ClCompile Include="..\deps\breakpad\src\common\windows\string_utils.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\client\windows\crash_generation\client_info.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\client\windows\crash_generation\crash_generation_client.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\client\windows\crash_generation\crash_generation_server.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\client\windows\crash_generation\minidump_generator.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\client\windows\handler\exception_handler.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\common\windows\guid_string.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\common\windows\string_utils.cc" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\deps\breakpad\src\client\windows\common\auto_critical_section.h" />
-    <ClInclude Include="..\deps\breakpad\src\client\windows\common\ipc_protocol.h" />
-    <ClInclude Include="..\deps\breakpad\src\client\windows\crash_generation\client_info.h" />
-    <ClInclude Include="..\deps\breakpad\src\client\windows\crash_generation\crash_generation_client.h" />
-    <ClInclude Include="..\deps\breakpad\src\client\windows\crash_generation\crash_generation_server.h" />
-    <ClInclude Include="..\deps\breakpad\src\client\windows\crash_generation\minidump_generator.h" />
-    <ClInclude Include="..\deps\breakpad\src\client\windows\handler\exception_handler.h" />
-    <ClInclude Include="..\deps\breakpad\src\common\windows\guid_string.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\client\windows\common\auto_critical_section.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\client\windows\common\ipc_protocol.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\client\windows\crash_generation\client_info.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\client\windows\crash_generation\crash_generation_client.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\client\windows\crash_generation\crash_generation_server.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\client\windows\crash_generation\minidump_generator.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\client\windows\handler\exception_handler.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\common\windows\guid_string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -71,10 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\deps\breakpad\src;$(VSInstallDir)\DIA SDK\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\deps\breakpad\src;$(VSInstallDir)\DIA SDK\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>..\deps\breakpad\src;$(VSInstallDir)\DIA SDK\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\deps\breakpad\src;$(VSInstallDir)\DIA SDK\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -125,20 +125,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\deps\breakpad\src\common\windows\dia_util.cc" />
-    <ClCompile Include="..\deps\breakpad\src\common\windows\guid_string.cc" />
-    <ClCompile Include="..\deps\breakpad\src\common\windows\omap.cc" />
-    <ClCompile Include="..\deps\breakpad\src\common\windows\pdb_source_line_writer.cc" />
-    <ClCompile Include="..\deps\breakpad\src\common\windows\string_utils.cc" />
-    <ClCompile Include="..\deps\breakpad\src\tools\windows\dump_syms\dump_syms.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\common\windows\dia_util.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\common\windows\guid_string.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\common\windows\omap.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\common\windows\pdb_source_line_writer.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\common\windows\string_utils.cc" />
+    <ClCompile Include="..\..\deps\breakpad\src\tools\windows\dump_syms\dump_syms.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\deps\breakpad\src\common\windows\dia_util.h" />
-    <ClInclude Include="..\deps\breakpad\src\common\windows\guid_string.h" />
-    <ClInclude Include="..\deps\breakpad\src\common\windows\omap.h" />
-    <ClInclude Include="..\deps\breakpad\src\common\windows\omap_internal.h" />
-    <ClInclude Include="..\deps\breakpad\src\common\windows\pdb_source_line_writer.h" />
-    <ClInclude Include="..\deps\breakpad\src\common\windows\string_utils-inl.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\common\windows\dia_util.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\common\windows\guid_string.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\common\windows\omap.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\common\windows\omap_internal.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\common\windows\pdb_source_line_writer.h" />
+    <ClInclude Include="..\..\deps\breakpad\src\common\windows\string_utils-inl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
