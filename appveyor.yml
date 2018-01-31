@@ -8,7 +8,9 @@ build_script:
   - scripts\build-appveyor
 
 artifacts:
-  - path: 'windows\breakpad-tools-windows.zip'
+  - path: 'windows\Release'
+    name: breakpad-tools-windows
+    type: zip
 
 deploy:
   provider: S3
@@ -18,4 +20,4 @@ deploy:
   bucket: getsentry-builds
   set_public: true
   folder: $(APPVEYOR_REPO_NAME)
-  artifact: /.*/
+  artifact: breakpad-tools-windows
