@@ -15,6 +15,7 @@ The latest builds can always be downloaded here:
 
 * [Download linux archive](https://s3.amazonaws.com/getsentry-builds/getsentry/breakpad-tools/breakpad-tools-linux.zip)
 * [Download macOS archive](https://s3.amazonaws.com/getsentry-builds/getsentry/breakpad-tools/breakpad-tools-macos.zip)
+* [Download windows archive](https://s3.amazonaws.com/getsentry-builds/getsentry/breakpad-tools/windows/breakpad-tools-windows.zip)
 
 ## Contents
 
@@ -52,6 +53,9 @@ The breakpad libraries and tools are built with custom makefiles. Each OS folder
 contains a slightly different version customized to the platform. Breakpad has
 broken their own build files (especially on macOS) quite frequently, so this is
 the most stable approach.
+
+The Windows build uses `msbuild` instead of a makefile. It currently does not
+generate the client library and symbols folders.
 
 The breakpad submodule has been updated last on `2018-01-09`. Future updates
 might require changes to the makefiles.
