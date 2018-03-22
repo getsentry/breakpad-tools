@@ -169,6 +169,9 @@ $(LIBRARIES:%=$(OUT_DIR)/lib%.a): %.a: $$(addprefix $(OUT_DIR)/,$$($$(*F)_OBJ))
 .SECONDEXPANSION:
 $(BINARIES:%=$(OUT_DIR)/%): %: $$(addprefix $(OUT_DIR)/,$$($$(*F)_OBJ))
 	$(LINK.cpp) -o $@ $^ -lpthread
+	objcopy --only-keep-debug $@ $@.debug
+	strip -g $@
+	objcopy --add-gnu-debuglink=$@.debug $@
 
 $(OUT_DIR)/%.o: $(TOP_DIR)/%.c
 	@mkdir -p $(@D)
