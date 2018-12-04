@@ -15,7 +15,7 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-6
-      env: CC=gcc-6 CXX=g++-6
+      before_script: export CC=gcc-6 CXX=g++-6
     - os: osx
       env: PLATFORM=macos
       compiler: clang
