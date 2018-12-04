@@ -5,6 +5,7 @@ OMIT_FP ?= true
 
 FLAGS += \
 	-g \
+	-gz \
 	-fPIC \
 	-O$(OPT_LEVEL) \
 	$(if $OMIT_FP, -fomit-frame-pointer) \

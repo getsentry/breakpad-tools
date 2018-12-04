@@ -1,6 +1,5 @@
 language: cpp
 install: make
-compiler: clang
 sudo: required
 
 install: skip
@@ -10,8 +9,10 @@ matrix:
   include:
     - os: linux
       env: PLATFORM=linux
+      compiler: gcc
     - os: osx
       env: PLATFORM=macos
+      compiler: clang
 
 deploy:
   provider: s3
