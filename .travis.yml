@@ -9,7 +9,13 @@ matrix:
   include:
     - os: linux
       env: PLATFORM=linux
-      compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+      env: CC=gcc-6 CXX=g++-6
     - os: osx
       env: PLATFORM=macos
       compiler: clang
