@@ -8,17 +8,10 @@ script: scripts/build-travis.sh
 matrix:
   include:
     - os: linux
+      dist: xenial
       env: PLATFORM=linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-6
-      before_script: export CC=gcc-6 CXX=g++-6
     - os: osx
       env: PLATFORM=macos
-      compiler: clang
 
 deploy:
   provider: s3
