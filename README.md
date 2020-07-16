@@ -30,6 +30,8 @@ Each platform build folder contains the following artifacts:
 
 * `dump_syms`: A tool to create breakpad symbols<br>
   _target: `make dump_syms`_
+* `minidump_dump`: A tool to show raw contents of minidumps<br>
+  _target: `make minidump_dump`_
 * `minidump_stackwalk`: A tool to process minidumps<br>
   _target: `make minidump_stackwalk`_
 
