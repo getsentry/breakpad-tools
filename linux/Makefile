@@ -122,14 +122,14 @@ crash_OBJ = \
 
 minidump_stackwalk_OBJ = \
 	deps/breakpad/src/processor/minidump_stackwalk.o \
-	libdisasm.a \
 	libprocessor.a \
+	libdisasm.a \
 	$(NULL)
 
 minidump_dump_OBJ = \
 	deps/breakpad/src/processor/minidump_dump.o \
-	libdisasm.a \
 	libprocessor.a \
+	libdisasm.a \
 	$(NULL)
 
 dump_syms_OBJ = \
