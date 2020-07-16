@@ -25,6 +25,7 @@ CXXFLAGS += \
 
 BINARIES = \
 	crash \
+	minidump_dump \
 	minidump_stackwalk \
 	dump_syms \
 	$(NULL)
@@ -32,6 +33,7 @@ BINARIES = \
 LIBRARIES = \
 	client \
 	disasm \
+	processor \
 	$(NULL)
 
 libdisasm_OBJ = \
@@ -70,13 +72,7 @@ libclient_OBJ = \
 	deps/breakpad/src/common/mac/MachIPC.o \
 	$(NULL)
 
-crash_OBJ = \
-	libclient.a \
-	macos/main.o \
-	$(NULL)
-
-minidump_stackwalk_OBJ = \
-	libdisasm.a \
+libprocessor_OBJ = \
 	deps/breakpad/src/common/path_helper.o \
 	deps/breakpad/src/processor/basic_code_modules.o \
 	deps/breakpad/src/processor/basic_source_line_resolver.o \
@@ -110,7 +106,23 @@ minidump_stackwalk_OBJ = \
 	deps/breakpad/src/processor/minidump.o \
 	deps/breakpad/src/processor/minidump_processor.o \
 	deps/breakpad/src/processor/symbolic_constants_win.o \
+	$(NULL)
+
+crash_OBJ = \
+	libclient.a \
+	macos/main.o \
+	$(NULL)
+
+minidump_stackwalk_OBJ = \
+	libdisasm.a \
+	libprocessor.a \
 	deps/breakpad/src/processor/minidump_stackwalk.o \
+	$(NULL)
+
+minidump_dump_OBJ = \
+	libdisasm.a \
+	libprocessor.a \
+	deps/breakpad/src/processor/minidump_dump.o \
 	$(NULL)
 
 dump_syms_OBJ = \

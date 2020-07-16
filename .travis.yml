@@ -23,3 +23,5 @@ deploy:
   bucket: getsentry-builds
   upload-dir: $TRAVIS_REPO_SLUG
   local_dir: dist
+  on:
+    branch: master
